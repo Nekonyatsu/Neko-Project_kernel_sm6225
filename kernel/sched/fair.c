@@ -156,11 +156,11 @@ unsigned int sched_capacity_margin_up[CPU_NR] = {
 unsigned int sched_capacity_margin_down[CPU_NR] = {
 			[0 ... CPU_NR-1] = 1205}; /* ~15% margin */
 /* 1ms default for 20ms window size scaled to 1024 */
-unsigned int sysctl_sched_min_task_util_for_boost = 51;
+unsigned int sysctl_sched_min_task_util_for_boost = 40;
 /* 0.68ms default for 20ms window size scaled to 1024 */
-unsigned int sysctl_sched_min_task_util_for_colocation = 35;
-unsigned int sysctl_walt_rtg_cfs_boost_prio = 99; /* disabled by default */
-unsigned int sysctl_walt_low_latency_task_threshold; /* disabled by default */
+unsigned int sysctl_sched_min_task_util_for_colocation = 10;
+unsigned int sysctl_walt_rtg_cfs_boost_prio = 20; /* disabled by default */
+unsigned int sysctl_walt_low_latency_task_threshold = 1; /* disabled by default */
 __read_mostly unsigned int sysctl_sched_force_lb_enable = 1;
 #endif
 
