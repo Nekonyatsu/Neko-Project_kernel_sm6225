@@ -21,7 +21,7 @@ static struct notifier_block kgsl_reclaim_nb;
  * that allowing 30MB (7680 pages) of relcaim per process will have little
  * impact and the latency will be within acceptable limit.
  */
-static u32 kgsl_reclaim_max_page_limit = 7680;
+static u32 kgsl_reclaim_max_page_limit = 0;
 
 static int kgsl_memdesc_get_reclaimed_pages(struct kgsl_mem_entry *entry)
 {
